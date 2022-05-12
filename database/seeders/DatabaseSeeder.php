@@ -32,6 +32,8 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // name email password role_id id_number gender year_start university faculty major
+
+        // ------------- ADMINS ------------- 
         User::create([
             'name' => 'adminanthony',
             'email' => 'admin@gmail.com',
@@ -44,6 +46,90 @@ class DatabaseSeeder extends Seeder
             'faculty' => 1,
             'major' => 1,
         ]);
+
+        User::create([
+            'name' => 'Admin One',
+            'email' => 'admin1@gmail.com',
+            'password' => Hash::make($adminpassword),
+            'role_id' => 1,
+            'id_number' => '20410019',
+            'gender' => 'Male',
+            'year_start' => '2010',
+            'university' => 'Ciputra University',
+            'faculty' => 1,
+            'major' => 1,
+        ]);
+
+        User::create([
+            'name' => 'Admin Two',
+            'email' => 'admin2@gmail.com',
+            'password' => Hash::make($adminpassword),
+            'role_id' => 1,
+            'id_number' => '20414019',
+            'gender' => 'Male',
+            'year_start' => '2014',
+            'university' => 'Ciputra University',
+            'faculty' => 1,
+            'major' => 1,
+        ]);
+
+        User::create([
+            'name' => 'Admin Three',
+            'email' => 'admin3@gmail.com',
+            'password' => Hash::make($adminpassword),
+            'role_id' => 1,
+            'id_number' => '20434019',
+            'gender' => 'Male',
+            'year_start' => '2020',
+            'university' => 'Ciputra University',
+            'faculty' => 1,
+            'major' => 1,
+        ]);
+
+        User::create([
+            'name' => 'Admin Four',
+            'email' => 'admin4@gmail.com',
+            'password' => Hash::make($adminpassword),
+            'role_id' => 1,
+            'id_number' => '20444019',
+            'gender' => 'Male',
+            'year_start' => '2021',
+            'university' => 'Ciputra University',
+            'faculty' => 1,
+            'major' => 1,
+        ]);
+
+        User::create([
+            'name' => 'Admin Five',
+            'email' => 'admin5@gmail.com',
+            'password' => Hash::make($adminpassword),
+            'role_id' => 1,
+            'id_number' => '204140195',
+            'gender' => 'Male',
+            'year_start' => '2022',
+            'university' => 'Ciputra University',
+            'faculty' => 1,
+            'major' => 1,
+        ]);
+
+
+
+
+        // ------------- USERS / PARTICIPANTS ------------- 
+        User::create([
+            'name' => 'useranthony',
+            'email' => 'user@gmail.com',
+            'password' => Hash::make($adminpassword),
+            'role_id' => 2,
+            'id_number' => '20417901',
+            'gender' => 'Other',
+            'year_start' => '2017',
+            'university' => 'Ciputra University',
+            'faculty' => 1,
+            'major' => 1,
+        ]);
+
+        
 
         Category::create([
             'name' => 'Machine Learning',

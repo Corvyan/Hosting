@@ -11,13 +11,25 @@
             </p>
 
             <div class="flex flex-col justify-center items-center">
-                @if (!$competition->appealedBy(auth()->user()))
+
+                @if (Auth::user()->appeals->count() == 0)
                     <div class="text-center">
                         <a href="{{ route('users.create', $competition) }}" class="mt-6 inline-block bg-pink-500 text-center py-2 px-4 rounded hover:bg-purple-500 transition">Create Form Request</a>
                     </div>
                 @else
                     
                 @endif
+
+                {{-- @if (!$competition->appealedBy(auth()->user()))
+                    <div class="text-center">
+                        <a href="{{ route('users.create', $competition) }}" class="mt-6 inline-block bg-pink-500 text-center py-2 px-4 rounded hover:bg-purple-500 transition">Create Form Request</a>
+                    </div>
+                @else
+                    
+                @endif --}}
+
+
+
                 {{-- @if (!$competition->appealedBy(auth()->user()))
                     <form action="{{ route('users.appeal', $competition) }}" method="post" class="mr-1">
                         @csrf

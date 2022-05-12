@@ -4,6 +4,7 @@ namespace App\Http\Controllers\User;
 
 use App\Models\Competition;
 use App\Models\User;
+use App\Models\Appeal;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -18,7 +19,7 @@ class UserController extends Controller
 
     public function show(Competition $competition)
     {
-        //dd($competition);
+        //$appeals = Appeal::all();
         return view('user.crud.show', compact('competition'));
     }
 }
